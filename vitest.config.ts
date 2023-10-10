@@ -1,5 +1,5 @@
-import EnvironmentPlugin from 'vite-plugin-environment'
-import { defineConfig } from 'vitest/config'
+import EnvironmentPlugin from 'vite-plugin-environment';
+import { defineConfig } from 'vitest/config';
 export default defineConfig({
   plugins: [EnvironmentPlugin(['REACT_APP_TEXT'])],
   test: {
@@ -7,4 +7,4 @@ export default defineConfig({
     globals: true,
     setupFiles: ['./src/setupTests.ts'],
   },
-})
+});
