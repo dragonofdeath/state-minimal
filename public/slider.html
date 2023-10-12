@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slider with Input Box</title>
+</head>
+<body>
+
+  <input type="range" id="slider" min="0" max="100" step="1">
+  <input type="number" id="inputBox" min="0" max="100">
+    <div><button id="get">Show value</button></div>
+    <div> Result: <output id="output"></output> </div>
+    <div><button id="setSlider">Set value to 50</button></div>
+
+  <script>
+    const slider = document.getElementById("slider");
+    const inputBox = document.getElementById("inputBox");
+    const output = document.getElementById("output");
+    const buttonGet = document.getElementById("get");
+    const buttonSet = document.getElementById("setSlider");
+
+    buttonGet.addEventListener("click", function() {
+      output.innerText = inputBox.value;
+    });
+
+    buttonSet.addEventListener("click", function() {
+      slider.value = 50;
+    });
+
+    // Update input box when slider changes
+    slider.addEventListener("input", function() {
+      <!-- console.log("slider on change"); -->
+      inputBox.value = slider.value;
+    });
+
+    // Update slider when input box changes
+    inputBox.addEventListener("input", function() {
+      <!-- console.log("input on change"); -->
+      slider.value = inputBox.value;
+    });
+
+  </script>
+
+</body>
+</html>
