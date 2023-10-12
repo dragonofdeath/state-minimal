@@ -18,24 +18,20 @@
     const buttonGet = document.getElementById("get");
     const buttonSet = document.getElementById("setSlider");
 
+    slider.addEventListener("input", function() {
+      inputBox.value = slider.value;
+    });
+
+    inputBox.addEventListener("input", function() {
+      slider.value = inputBox.value;
+    });
+
     buttonGet.addEventListener("click", function() {
       output.innerText = inputBox.value;
     });
 
     buttonSet.addEventListener("click", function() {
       slider.value = 50;
-    });
-
-    // Update input box when slider changes
-    slider.addEventListener("input", function() {
-      <!-- console.log("slider on change"); -->
-      inputBox.value = slider.value;
-    });
-
-    // Update slider when input box changes
-    inputBox.addEventListener("input", function() {
-      <!-- console.log("input on change"); -->
-      slider.value = inputBox.value;
     });
 
   </script>

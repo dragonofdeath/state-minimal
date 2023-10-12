@@ -63,7 +63,10 @@ export default function PackingList() {
       <AddItem onAddItem={handleAddItem} />
       <ul>
         {items.map((item) => (
-          <li className="flex items-center justify-left space-x-4 my-2">
+          <li
+            key={item.id}
+            className="flex items-center justify-left space-x-4 my-2"
+          >
             <Label>
               <Checkbox
                 className="mr-2"
@@ -96,7 +99,6 @@ export default function PackingList() {
   );
 }
 
-// input with button
 const AddItem: React.FC<{ onAddItem: (title: string) => void }> = ({
   onAddItem,
 }) => {
@@ -122,5 +124,3 @@ const AddItem: React.FC<{ onAddItem: (title: string) => void }> = ({
     </form>
   );
 };
-
-// checkbox

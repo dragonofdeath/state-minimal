@@ -42,7 +42,7 @@ export const FontApp: React.FC = () => {
   console.log('font.size', font.size);
 
   return (
-    <div className="flex flex-row gap-8 items-center">
+    <div className="flex flex-col gap-8 items-center">
       <FontPicker font={font} onFontChange={setFont} />
       <Preview font={font} />
     </div>
@@ -51,22 +51,20 @@ export const FontApp: React.FC = () => {
 
 const Preview: React.FC<{ font: Font }> = ({ font }) => {
   return (
-    <Card className="w-[100%]">
-      <CardHeader>Demo paragraph</CardHeader>
-      <CardContent>
-        <p
-          style={{
-            fontFamily: font.family,
-            fontSize: Number(font.size),
-            fontStyle: font.style,
-            fontWeight: font.bold ? 'bold' : 'normal',
-            textDecoration: font.decoration,
-          }}
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-      </CardContent>
-    </Card>
+    <div className="w-[100%]">
+      <p>Demo paragraph</p>
+      <p
+        style={{
+          fontFamily: font.family,
+          fontSize: Number(font.size),
+          fontStyle: font.style,
+          fontWeight: font.bold ? 'bold' : 'normal',
+          textDecoration: font.decoration,
+        }}
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+    </div>
   );
 };
 const FontPicker: React.FC<{
@@ -76,7 +74,7 @@ const FontPicker: React.FC<{
   return (
     <Card className="w-[320px]">
       <CardHeader>Font</CardHeader>
-      <CardContent className="flex flex-col gap-4 items-end">
+      <CardContent className="flex flex-col gap-4 items-start">
         <Label className="flex gap-2 items-center">
           Family
           <Select
@@ -98,6 +96,7 @@ const FontPicker: React.FC<{
           <Input
             className="w-[90px]"
             type="number"
+            step="1"
             value={font.size}
             onChange={(e) => onFontChange({ ...font, size: e.target.value })}
           />
