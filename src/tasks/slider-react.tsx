@@ -1,7 +1,8 @@
-import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 
-const SliderInReact = () => {
+import { Button } from '@/components/ui/button';
+
+export const SliderInReact = () => {
   const [value, setValue] = useState(0);
 
   return (
@@ -40,5 +41,3 @@ const SliderInReact = () => {
     </div>
   );
 };
-
-export default SliderInReact;

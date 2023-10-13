@@ -8,13 +8,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+import { Select } from '@/components/ui/myselect';
 import { Toggle } from '@/components/ui/toggle';
 
 type Font = {
@@ -80,15 +74,11 @@ const FontPicker: React.FC<{
           <Select
             value={font.family}
             onValueChange={(family) => onFontChange({ ...font, family })}
-          >
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Font" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="serif">serif</SelectItem>
-              <SelectItem value="sans-serif">sans-serif</SelectItem>
-            </SelectContent>
-          </Select>
+            options={[
+              { id: 'serif', label: 'serif' },
+              { id: 'sans-serif', label: 'sans-serif' },
+            ]}
+          />
         </Label>
 
         <Label className="flex gap-2 items-center">

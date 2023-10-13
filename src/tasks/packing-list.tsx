@@ -19,7 +19,7 @@ const initialItems = [
   { id: 2, title: 'Watercolors', packed: false },
 ];
 
-export default function PackingList() {
+export function PackingList() {
   const [items, setItems] = useState(initialItems);
   const [total, setTotal] = useState(3);
   const [packed, setPacked] = useState(1);

@@ -4,10 +4,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import { Card } from './components/ui/card';
 import { FontApp } from './tasks/font-picker';
-import PackingList from './tasks/packing-list';
-import SliderInReact from './tasks/slider-react';
-import TickTackToe from './tasks/tik-tack-toe';
+import { PackingList } from './tasks/packing-list';
+import { SliderInReact } from './tasks/slider-react';
+import { TickTackToe } from './tasks/tik-tack-toe';
 import './index.css';
+import { CampaignInfo } from './tasks/advertiser-sync';
 
 const App: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState(() => {
@@ -53,27 +54,41 @@ const App: React.FC = () => {
               <TabsTrigger value="font">Font picker</TabsTrigger>
               <TabsTrigger value="tick">Tick Tack Toe</TabsTrigger>
               <TabsTrigger value="end">done</TabsTrigger>
+              <TabsTrigger value="bonus">bonus</TabsTrigger>
             </TabsList>
           </div>
           <div className="py-2 px-3">
             <TabsContent value="intro" className="text-lg">
               <div className="h-[90vh] flex flex-col justify-center items-center">
-                <h1 className="text-3xl">State is bad.</h1>
-                <h2 className="text-lg">But you can't do much without it</h2>
+                <h1 className="text-3xl">State is bad</h1>
+                <h2 className="text-lg">but you can't do much without it</h2>
               </div>
               The research results by some state scientist:
               <img src="/problems.png" alt="problems" />
             </TabsContent>
 
             <TabsContent value="end" className="text-lg">
-              <div className="h-[90vh] flex flex-col justify-center items-center">
+              <div className="h-[80vh] flex flex-col justify-center items-center gap-6">
                 <h1 className="text-3xl">Thank you.</h1>
-                <p>
-                  How to count state we will learn in 'Make impossible states
-                  impossible'
-                </p>
+                Summary:
+                <ul className="list-disc">
+                  <li>notice where state is represented more than once</li>
+                  <li>
+                    <a
+                      className="underline"
+                      href="https://kentcdodds.com/blog/dont-sync-state-derive-it"
+                    >
+                      derive instead of syncing
+                    </a>
+                  </li>
+                  <li>separate orthogonal state</li>
+                </ul>
+                <i>
+                  How to count state even better we will learn in 'Make
+                  impossible states impossible'
+                </i>
+                <p className="text-xl">LESS STATE - LESS PROBLEMS</p>
               </div>
-              <p className="text-xl">LESS STATE - LESS PROBLEMS</p>
             </TabsContent>
             <TabsContent value="too_much" className="grid gap-4 grid-cols-7">
               <Card className="col-span-5 p-8">
@@ -173,6 +188,17 @@ const App: React.FC = () => {
               </Card>
               <Card className="col-span-2 p-8">
                 Real font object found in the wild
+                <ul className="list-disc">
+                  <li>fix the thing!</li>
+                </ul>
+              </Card>
+            </TabsContent>
+            <TabsContent value="bonus" className="grid gap-4 grid-cols-7">
+              <Card className="col-span-5 p-8">
+                <CampaignInfo />
+              </Card>
+              <Card className="col-span-2 p-8">
+                Real life problem with syncing
                 <ul className="list-disc">
                   <li>fix the thing!</li>
                 </ul>

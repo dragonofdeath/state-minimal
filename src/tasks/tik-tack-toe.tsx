@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 type SquareValue = 'X' | 'O' | null;
 
-const Game: React.FC = () => {
+export const TickTackToe: React.FC = () => {
   const [squares, setSquares] = useState<SquareValue[]>(Array(9).fill(null));
   const [isXNext, setIsXNext] = useState<boolean>(true);
   const [winner, setWinner] = useState<SquareValue>(null);
@@ -81,5 +81,3 @@ const calculateWinner = (squares: SquareValue[]): SquareValue => {
   }
   return null;
 };
-
-export default Game;
