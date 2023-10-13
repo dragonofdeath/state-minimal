@@ -7,18 +7,18 @@ export const CampaignInfo: React.FC = () => {
   const [advertiserId, setAdvertiserId] = useState<string | null>(null);
   const [campaignId, setCampaignId] = useState<string | null>(null);
 
-  const [profit, setProfit] = useState<number | null>(null);
+  const [cost, setCost] = useState<number | null>(null);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     if (!advertiserId || !campaignId) return;
-    fetchCampaignProfit(advertiserId, campaignId)
-      .then((profit) => {
-        setProfit(profit);
+    fetchCampaignCost(advertiserId, campaignId)
+      .then((cost) => {
+        setCost(cost);
         setError(null);
       })
       .catch((error) => {
-        setProfit(null);
+        setCost(null);
         setError(error);
       });
   }, [advertiserId, campaignId]);
@@ -33,7 +33,7 @@ export const CampaignInfo: React.FC = () => {
         />
       )}
       {error && <p className="text-red-500">Error: {error.message}</p>}
-      {profit && <p className="text-green-500">Profit: {profit}</p>}
+      {cost && <p className="text-green-500">Cost: {cost}</p>}
     </div>
   );
 };
@@ -53,7 +53,7 @@ const AdvertiserSelector: React.FC<{ onSelect: (id: string) => void }> = ({
       <Select
         value={advertiserId}
         onValueChange={(id) => setAdvertiserId(id)}
-        options={advertisers}
+        options={getAdvertiserOptions()}
       />
     </Label>
   );
@@ -86,7 +86,7 @@ const CampaignSelector: React.FC<{
       <Select
         value={campaignId}
         onValueChange={(id) => setCampaignId(id)}
-        options={advertisers.find((a) => a.id === advertiserId)!.campaigns}
+        options={getCampaignOptions(advertiserId)}
       />
     </Label>
   );
@@ -102,6 +102,10 @@ type Campaign = {
   id: string;
   label: string;
 };
+
+const getAdvertiserOptions = () => advertisers;
+const getCampaignOptions = (advertiserId: string): Campaign[] =>
+  advertisers.find((a) => a.id === advertiserId)?.campaigns || [];
 
 const advertisers: Advertiser[] = [
   {
@@ -138,7 +142,7 @@ const profit = {
   adv2: { camp3: 300, camp4: 400 },
 };
 
-const fetchCampaignProfit = async (
+const fetchCampaignCost = async (
   advertiserId: string,
   campaignId: string,
 ): Promise<number> => {

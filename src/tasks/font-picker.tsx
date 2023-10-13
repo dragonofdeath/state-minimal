@@ -33,7 +33,6 @@ export const FontApp: React.FC = () => {
     underline: false,
     weight: 'normal',
   });
-  console.log('font.size', font.size);
 
   return (
     <div className="flex flex-col gap-8 items-center">
