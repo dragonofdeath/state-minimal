@@ -11,7 +11,7 @@ export const TickTackToe: React.FC = () => {
   const [winner, setWinner] = useState<SquareValue>(null);
 
   const handleClick = (i: number) => {
-    if (squares[i] || calculateWinner(squares)) return;
+    if (squares[i] || winner) return;
     const newSquares = squares.slice();
     newSquares[i] = isXNext ? 'X' : 'O';
     setSquares(newSquares);

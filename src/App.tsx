@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import { Card } from './components/ui/card';
+import { CampaignInfo } from './tasks/advertiser-sync';
 import { FontApp } from './tasks/font-picker';
 import { PackingList } from './tasks/packing-list';
 import { SliderInReact } from './tasks/slider-react';
 import { TickTackToe } from './tasks/tik-tack-toe';
 import './index.css';
-import { CampaignInfo } from './tasks/advertiser-sync';
 
 const App: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState(() => {
