@@ -4157,7 +4157,7 @@ __metadata:
     date-fns: ^2.30.0
     eslint: ^8.52.0
     eslint-config-prettier: ^9.0.0
-    eslint-config-ts-prefixer: ^1.12.4
+    eslint-config-ts-prefixer: ^1.12.5
     eslint-import-resolver-typescript: ^3.6.1
     eslint-plugin-import: ^2.29.0
     eslint-plugin-jsx-a11y: ^6.8.0
@@ -4831,18 +4831,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-ts-prefixer@npm:^1.12.4":
-  version: 1.12.4
-  resolution: "eslint-config-ts-prefixer@npm:1.12.4"
+"eslint-config-ts-prefixer@npm:^1.12.5":
+  version: 1.12.5
+  resolution: "eslint-config-ts-prefixer@npm:1.12.5"
   dependencies:
     "@inquirer/prompts": ^3.1.1
     commander: ^11.0.0
     inquirer: ^9.2.11
   peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^6.9.0
-    "@typescript-eslint/parser": ^6.9.0
+    "@typescript-eslint/eslint-plugin": ^6.9.1
+    "@typescript-eslint/parser": ^6.9.1
     eslint: ^8.52.0
-    eslint-config-prettier: ^9.0.0
     eslint-import-resolver-typescript: ^3.6.1
     eslint-plugin-import: ^2.29.0
     eslint-plugin-prettier: ^5.0.1
@@ -4850,7 +4849,7 @@ __metadata:
     typescript: ^5.2.2
   bin:
     eslint-config-ts-prefixer: bin/cli.mjs
-  checksum: dc0f8137a4d294eeeeb2879ae75f24acd1776ee9a4ca3c1ec801e57a88a7f97b0ce74efcf5e31bf69b292851fbfddedeae38593e15021efa6756530311a929b8
+  checksum: 85afd6863172c3179ad8690d24d12e02aeb516e8c233bd529e6b74e17a686fef697bd6b773e0586abb9e08392ca2491d6524fee121c86c4055573446be9808cd
   languageName: node
   linkType: hard
 
