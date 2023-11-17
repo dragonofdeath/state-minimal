@@ -4165,7 +4165,7 @@ __metadata:
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-sort-keys-custom-order: ^1.0.5
     jsdom: ^22.1.0
-    msw: ^2.0.7
+    msw: ^2.0.8
     postcss: ^8.4.31
     prettier: ^3.1.0
     prettier-plugin-tailwindcss: ^0.5.7
@@ -6954,9 +6954,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "msw@npm:2.0.7"
+"msw@npm:^2.0.8":
+  version: 2.0.8
+  resolution: "msw@npm:2.0.8"
   dependencies:
     "@bundled-es-modules/cookie": ^2.0.0
     "@bundled-es-modules/js-levenshtein": ^2.0.1
@@ -6974,7 +6974,6 @@ __metadata:
     inquirer: ^8.2.0
     is-node-process: ^1.2.0
     js-levenshtein: ^1.1.6
-    node-fetch: ^2.6.7
     outvariant: ^1.4.0
     path-to-regexp: ^6.2.0
     strict-event-emitter: ^0.5.0
@@ -6987,7 +6986,7 @@ __metadata:
       optional: true
   bin:
     msw: cli/index.js
-  checksum: e1fc5ea12ddd013b14003920a4c8c6d34a5006d3a41ec63a8b6956737213aff7815e1971777e3e937507190dd9b292a75fd084f8d97b9691dd55022e0c1ce2dd
+  checksum: 8737dae4cf516d8c591ad8d3751cef2f8f07d10a1f995b8cd7d19d8e955a29352dd6fc092f04bc0e1d0025663ccc3c64ae7e56e29c8d4a4b13699e3ee4747c46
   languageName: node
   linkType: hard
 
@@ -7049,7 +7048,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.0, node-fetch@npm:^2.6.12, node-fetch@npm:^2.6.7":
+"node-fetch@npm:^2.6.0, node-fetch@npm:^2.6.12":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
   dependencies:
