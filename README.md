@@ -1,4 +1,4 @@
-# state is bad
+# demos/chalenges about how having less state equals to less problems
 
 ```
   yarn install
