@@ -230,12 +230,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.23.1, @babel/runtime@npm:^7.23.2":
+"@babel/runtime@npm:^7.23.2":
   version: 7.23.2
   resolution: "@babel/runtime@npm:7.23.2"
   dependencies:
     regenerator-runtime: ^0.14.0
   checksum: 6c4df4839ec75ca10175f636d6362f91df8a3137f86b38f6cd3a4c90668a0fe8e9281d320958f4fbd43b394988958585a17c3aab2a4ea6bf7316b22916a371fb
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:^7.23.5":
+  version: 7.23.7
+  resolution: "@babel/runtime@npm:7.23.7"
+  dependencies:
+    regenerator-runtime: ^0.14.0
+  checksum: eba85bd24d250abb5ae19b16cffc15a54d3894d8228ace40fa4c0e2f1938f28b38ad3e3430ebff9a1ef511eeb8c527e36044ac19076d6deafa52cef35d8624b9
   languageName: node
   linkType: hard
 
@@ -4391,7 +4400,7 @@ __metadata:
     react-hook-form: ^7.49.2
     rimraf: ^5.0.5
     serve: ^14.2.1
-    tailwind-merge: ^2.0.0
+    tailwind-merge: ^2.2.0
     tailwindcss: ^3.4.0
     tailwindcss-animate: ^1.0.7
     typescript: ^5.1.6
@@ -8973,12 +8982,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwind-merge@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "tailwind-merge@npm:2.0.0"
+"tailwind-merge@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "tailwind-merge@npm:2.2.0"
   dependencies:
-    "@babel/runtime": ^7.23.1
-  checksum: f6ed8086c2378c26fb9a8c6d1dace2252ebb1d9858c868968e87be1c0248980b436d07cfdb7ab9368a22508705958b3c24330cd6d8c7801df42f57c080cc2fb2
+    "@babel/runtime": ^7.23.5
+  checksum: f80d31ec990792fb204e3ad5a184a4b18a8f8929c651c7067693d8ffa74c6ec9666f15f4e50c1d831a47e7dcc75e688887e34fdb734096363ad1868d9ad5778a
   languageName: node
   linkType: hard
 
